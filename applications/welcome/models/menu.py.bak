@@ -23,7 +23,7 @@ response.menu = [
     (T('Meteorite'), False, URL('meteoritepage', 'meteorite'), []),
     (T('UFO'), False, URL('ufopage', 'ufo'), []),
     (T('Map'), False, URL('mappage', 'map'), []),
-    (T('Update-Page'), False, URL('updatepage', 'update'), [])
+    (T('Update'), False, URL('updatepage', 'update'), [])
 ]
 
 # ----------------------------------------------------------------------------------------------------------------------
