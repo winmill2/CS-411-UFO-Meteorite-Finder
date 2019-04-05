@@ -1,0 +1,2 @@
+#crontab
+05  24  * *  * root *applications/instore/modules/updater.py

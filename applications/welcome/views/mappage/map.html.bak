@@ -1,0 +1,56 @@
+{{extend 'layout.html'}}
+<head>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<hr>
+<h1 style="text-align: center; margin-top: 50px;">Map</h1>
+
+<div>
+    {{=test}}
+</div>
+
+
+<div id='map' style='width: 900px; height: 400px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoid2NoZXJyeTIiLCJhIjoiY2p1MGJhZWdmMXBtMDQzcnprZzM3ZHNqaiJ9.xM3fgL3OLZ-AOCksXBDarQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
+
+
+<!------------------------------------------------------------------------------------------->
+
+<form align="center" action="chooseState()" id="choosestate" method="POST">
+    <select name="states">
+        {{for rows in row: }}
+            {{if not rows.state == "dc" and not rows.state == "pr": }}
+            <option value={{=rows.state.upper()}}> {{=rows.state.upper()}}</option>
+            {{pass}}
+        {{pass}}
+    </select>
+</form>
+<div align="center" style="margin-top: 20px;">
+    <button type="submit" form="choosestate" value="Submit">Submit</button>
+</div>
+<div>
+    Controller = {{=request.controller}} and Session var = {{=test}}
+</div>
+<form align="center" action="incSession()" id="inctest">
+</form>
+<div align="center" style="margin-top: 20px;">
+    <button type="submit" form="inctest" value="Submit">Submit</button>
+</div>
+
+
+
+<script src="js/jquery.js"></script>
+  <script src="js/raphael.js"></script>
+  <script src="js/jquery.usmap.js"></script>
+
+
+<div id="map" style="width: 350px; height: 250px;"></div>
+<div id="clicked-state"></div>

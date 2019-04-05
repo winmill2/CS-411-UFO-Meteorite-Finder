@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+# try something like
+
+session.testing = 0
+
+def home():
+    return locals()
+
+def goToMeteorite():
+    redirect(URL('meteoritepage', 'meteorite'))
+
+def goToUfo():
+    redirect(URL('ufopage', 'ufo'))
+
+def goToMap():
+    redirect(URL('mappage', 'map'))
+
+def goToUpdate():
+    redirect(URL('updatepage', 'update'))

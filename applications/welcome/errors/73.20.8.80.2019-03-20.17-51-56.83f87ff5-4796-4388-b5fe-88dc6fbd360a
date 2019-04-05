@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<class \'_mysql_exceptions.ProgrammingError\'> (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'ON (Location_table.state) `Location_table`.`id`, `Location_table`.`state` FROM `\' at line 1")'
+p3
+sS'layer'
+p4
+S'/home/utahgroup/web2py/applications/welcome/controllers/ufopage.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f3d810837b0, file "/home/utahgroup/web2py/applications/welcome/controllers/ufopage.py", line 3>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/utahgroup/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/utahgroup/web2py/applications/welcome/controllers/ufopage.py", line 7, in <module>\n  File "/home/utahgroup/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/utahgroup/web2py/applications/welcome/controllers/ufopage.py", line 4, in ufo\n    row = db(db.Location_table.country == "us").select(db.Location_table.id, db.Location_table.state, distinct=db.Location_table.state)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/objects.py", line 2277, in select\n    return adapter.select(self.query, fields, attributes)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/base.py", line 763, in select\n    return self._select_aux(sql, fields, attributes, colnames)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/base.py", line 719, in _select_aux\n    rows = self._select_aux_execute(sql)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/base.py", line 713, in _select_aux_execute\n    self.execute(sql)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/__init__.py", line 67, in wrap\n    return f(*args, **kwargs)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/base.py", line 413, in execute\n    rv = self.cursor.execute(command, *args[1:], **kwargs)\n  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 250, in execute\n    self.errorhandler(self, exc, value)\n  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler\n    raise errorvalue\nProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'ON (Location_table.state) `Location_table`.`id`, `Location_table`.`state` FROM `\' at line 1")\n'
+p11
+s.

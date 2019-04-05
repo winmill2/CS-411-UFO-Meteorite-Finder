@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> query() argument 1 must be string or read-only buffer, not list"
+p3
+sS'layer'
+p4
+S'/home/utahgroup/web2py/applications/welcome/controllers/mappage.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f0c17c8af30, file "/home/utahgroup/web2py/applications/welcome/controllers/mappage.py", line 3>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/utahgroup/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/utahgroup/web2py/applications/welcome/controllers/mappage.py", line 25, in <module>\n  File "/home/utahgroup/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/utahgroup/web2py/applications/welcome/controllers/mappage.py", line 13, in map\n    coord_rows = db.executesql([\'select distinct u.id, l.city, l.state, l.GeoLocation from UFO_table u, Location_table l where u.GeoLocation = l.GeoLocation and l.country = "us" and l.state != "pr" LIMIT 100\'], fields=[db.UFO_table.id, db.Location_table.city, db.Location_table.state, db.Location_table.GeoLocation])\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/base.py", line 772, in executesql\n    adapter.execute(query)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/__init__.py", line 67, in wrap\n    return f(*args, **kwargs)\n  File "/home/utahgroup/web2py/gluon/packages/dal/pydal/adapters/base.py", line 413, in execute\n    rv = self.cursor.execute(command, *args[1:], **kwargs)\n  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 250, in execute\n    self.errorhandler(self, exc, value)\n  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler\n    raise errorvalue\nTypeError: query() argument 1 must be string or read-only buffer, not list\n'
+p11
+s.

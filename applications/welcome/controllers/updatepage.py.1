@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# try something like
+def update():
+    joined = db(db.UFO_table.GeoLocation).select(limitby=(0, 10))
+#    joined = db.executesql('select * from UFO_table LIMIT 10')
+    ufo_grid = SQLFORM.grid(joined)
+    met_grid = SQLFORM.smartgrid(db.Meteorite_table, user_signature = False)
+    return locals()

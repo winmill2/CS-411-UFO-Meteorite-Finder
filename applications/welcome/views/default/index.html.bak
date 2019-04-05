@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+{{block header}}
+<center style="background-color: #333; color:white; padding:30px">
+  <h1>/{{=request.application}}/{{=request.controller}}/{{=request.function}}
+</center>
+
+<div>
+    Please enter a year:
+</div>
+
+
+It should be between 2013 and 1930:
+<form>
+  <input name="sql_order" />
+  <input type="submit" />
+</form>
+
+<div>
+    {{=message}}
+    <h1>
+        Meteorites:
+    </h1>
+    {{=row}}
+</div>

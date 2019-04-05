@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+<h1>Select table to update:</h1>
+<form>
+  <input type="radio" name="table"  value="ufo_grid"> UFO<br>
+  <input type="radio" name="table"  value="met_grid"> Meteorite<br> 
+  <p><input type="button" value="Submit"></p>
+</form> 
+
+
+<script type="text/javascript">
+    var radioValue
+    $(document).ready(function(){
+        $("input[type='button']").click(function(){
+        	 radioValue = $("input[name='table']:checked").val();
+            
+        });        
+    });
+</script>
+
+{{=ufo_grid}}

@@ -1,0 +1,620 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'tuple' object has no attribute '_db'"
+p3
+sS'layer'
+p4
+S'/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f9856e57c30, file "/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py", line 3>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.AttributeError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.AttributeError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.AttributeError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S'"\'tuple\' object has no attribute \'_db\'"'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.AttributeError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.AttributeError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.AttributeError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.AttributeError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.AttributeError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.AttributeError'>"
+p35
+sS'__doc__'
+p36
+S"'Attribute not found.'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.AttributeError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.AttributeError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.AttributeError object>"
+p43
+sS'args'
+p44
+S'("\'tuple\' object has no attribute \'_db\'",)'
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.AttributeError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.AttributeError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.AttributeError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.AttributeError object>"
+p55
+ssS'evalue'
+p56
+S"'tuple' object has no attribute '_db'"
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's]U\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>welcome</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>updatepage</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253-b54bab36-75ac-4e28-8b3b-9e329418df55<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_LENGTH</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_TYPE</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">DOCUMENT_ROOT</td><td style="vertical-align:top;">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTPS</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>_ga=GA1.2.1426202108.1553099613; session_id_welcome=73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e; session_id_admin=73.98.150.253-b54bab36-75ac-4e28-8b3b-9e329418df55; _gid=GA1.2.1203080187.1554407698</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_DNT</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>utahgroup.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>https://utahgroup.pythonanywhere.com/welcome/homepage/home</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_FORWARDED_FOR</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_REAL_IP</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/welcome/updatepage/update</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>10.0.0.162</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>59016</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_URI</td><td style="vertical-align:top;">:</td><td><div>/welcome/updatepage/update</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>utahgroup.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/utahgroup/web2py/applications/welcome/&#x27;, &#x27;/home/utahgroup/web2py/applications/admin/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_length</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_type</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">document_root</td><td style="vertical-align:top;">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>_ga=GA1.2.1426202108.1553099613; session_id_welcome=73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e; session_id_admin=73.98.150.253-b54bab36-75ac-4e28-8b3b-9e329418df55; _gid=GA1.2.1203080187.1554407698</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_dnt</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>utahgroup.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>https://utahgroup.pythonanywhere.com/welcome/homepage/home</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_forwarded_for</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_real_ip</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">https</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>35.173.69.207</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>glenn-liveweb2</div></td></tr><tr><td><div>utahgroup.pythonanywhere.com</div></td></tr><tr><td><div>localhost</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/welcome/updatepage/update</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>10.0.0.162</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>59016</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/welcome/updatepage/update</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>utahgroup.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.node</td><td style="vertical-align:top;">:</td><td><div>glenn-liveweb2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.version</td><td style="vertical-align:top;">:</td><td><div>2.0.17.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_node</td><td style="vertical-align:top;">:</td><td><div>glenn-liveweb2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_version</td><td style="vertical-align:top;">:</td><td><div>2.0.17.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.1-stable+timestamp.2018.08.06.01.02.56</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x7f985dc34c50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f9857001030&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x7f985dc34c50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f9857001030&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py/applications/welcome/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>update</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/utahgroup/web2py/applications/welcome/&#x27;, &#x27;/home/utahgroup/web2py/applications/admin/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>35.173.69.207</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>glenn-liveweb2</div></td></tr><tr><td><div>utahgroup.pythonanywhere.com</div></td></tr><tr><td><div>localhost</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.1-stable+timestamp.2018.08.06.01.02.56</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 4, 5, 19, 12, 6, 474123)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/welcome/updatepage/update</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 4, 5, 19, 12, 6, 474152)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f98558e4fd0&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/home/utahgroup/web2py/gluon/restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 0x7f9856e57c30, file "/...tions/welcome/controllers/updatepage.py", line 3>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 0x7f9856e57c30, file "/...tions/welcome/controllers/updatepage.py", line 3>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=\'/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py\', scode=<code object <module> at 0x7f9856e57c30, file "/...tions/welcome/controllers/updatepage.py", line 3>)'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py'
+p90
+sg66
+(dp91
+sg72
+I11
+sg73
+(dp92
+I1
+S'# -*- coding: utf-8 -*-'
+p93
+sI2
+S'# try something like'
+p94
+sI3
+S'def update():'
+p95
+sI4
+S'#    prejoined  = db.UFO_table.id < 10'
+p96
+sI5
+S'#    joined = (db.UFO_table.GeoLocation == db.Location_table.GeoLocation) & prejoined'
+p97
+sI6
+S"    joined = db(db.executesql('select * from UFO_table LIMIT 10'))"
+p98
+sI7
+S'    ufo_grid = SQLFORM.grid(query=joined, paginate = 10)'
+p99
+sI8
+S'    met_grid = SQLFORM.smartgrid(db.Meteorite_table, user_signature = False)'
+p100
+sI9
+S'    return locals()'
+p101
+ssg85
+S'()'
+p102
+sg87
+S'<module>'
+p103
+sa(dp104
+g64
+S'/home/utahgroup/web2py/gluon/globals.py'
+p105
+sg66
+(dp106
+S'self'
+p107
+S'undefined'
+p108
+sS'f'
+S'<function update>'
+p109
+ssg72
+I421
+sg73
+(dp110
+I416
+S"        self.flash = ''            # used by the default view layout"
+p111
+sI417
+S'        self.meta = Storage()      # used by web2py_ajax.html'
+p112
+sI418
+S'        self.menu = []             # used by the default view layout'
+p113
+sI419
+S'        self.files = []            # used by web2py_ajax.html'
+p114
+sI420
+S'        self._vars = None'
+p115
+sI421
+S'        self._caller = lambda f: f()'
+p116
+sI422
+S'        self._view_environment = None'
+p117
+sI423
+S'        self._custom_commit = None'
+p118
+sI424
+S'        self._custom_rollback = None'
+p119
+sI425
+S"        self.generic_patterns = ['*']"
+p120
+ssg85
+S'(f=<function update>)'
+p121
+sg87
+S'<lambda>'
+p122
+sa(dp123
+g64
+S'/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py'
+p124
+sg66
+(dp125
+S'SQLFORM.grid'
+p126
+S'<function grid>'
+p127
+sS'global SQLFORM'
+p128
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p129
+sS'paginate'
+p130
+g108
+sS'joined'
+p131
+S"<Set ((1L, datetime.datetime(1949, 10, 10, 20, 3...eceives mental signals not to pass info', None))>"
+p132
+sS'query'
+p133
+g108
+sS'ufo_grid'
+p134
+g108
+ssg72
+I7
+sg73
+(dp135
+I1
+S'# -*- coding: utf-8 -*-'
+p136
+sI2
+S'# try something like'
+p137
+sI3
+S'def update():'
+p138
+sI4
+S'#    prejoined  = db.UFO_table.id < 10'
+p139
+sI5
+S'#    joined = (db.UFO_table.GeoLocation == db.Location_table.GeoLocation) & prejoined'
+p140
+sI6
+S"    joined = db(db.executesql('select * from UFO_table LIMIT 10'))"
+p141
+sI7
+S'    ufo_grid = SQLFORM.grid(query=joined, paginate = 10)'
+p142
+sI8
+S'    met_grid = SQLFORM.smartgrid(db.Meteorite_table, user_signature = False)'
+p143
+sI9
+S'    return locals()'
+p144
+ssg85
+S'()'
+p145
+sg87
+S'update'
+p146
+sa(dp147
+g64
+S'/home/utahgroup/web2py/gluon/sqlhtml.py'
+p148
+sg66
+(dp149
+S'query'
+p150
+S"((1L, datetime.datetime(1949, 10, 10, 20, 30), u'(29.8830556, -97.9411111)', u'cylinder', u'This event took place in early fall around 194...ng in the Baptist Church. The Baptist Church sit', None), (2L, datetime.datetime(1949, 10, 10, 21, 0), u'(29.38421, -98.581082)', u'light', u'1949 Lackland AFB&#44 TX.  Lights racing across the sky &amp; making 90 degree turns on a dime.', None), (3L, datetime.datetime(1955, 10, 10, 17, 0), u'(53.2, -2.916667)', u'circle', u'Green/Orange circular disc over Chester&#44 England', None), (4L, datetime.datetime(1956, 10, 10, 21, 0), u'(28.9783333, -96.6458333)', u'circle', u'My older brother and twin sister were leaving ... had our bikes and I took a different route home', None), (5L, datetime.datetime(1960, 10, 10, 20, 0), u'(21.4180556, -157.8036111)', u'light', u'AS a Marine 1st Lt. flying an FJ4B fighter/att...&#39 in a &quot;clean&quot; aircraft (no ordinan', None), (6L, datetime.datetime(1961, 10, 10, 19, 0), u'(36.595, -82.1888889)', u'sphere', u'My father is now 89 my brother 52 the girl wit...hich worked with my father if he&#39s still livi', None), (7L, datetime.datetime(1965, 10, 10, 21, 0), u'(51.434722, -3.18)', u'circle', u'penarth uk  circle  3mins  stayed 30ft above m...n with the blink of the eye the speed was unreal', None), (8L, datetime.datetime(1965, 10, 10, 23, 45), u'(41.1175, -73.4083333)', u'disk', u'A bright orange color changing to reddish colo...bserved hovering above power transmission lines.', None), (9L, datetime.datetime(1966, 10, 10, 20, 0), u'(33.5861111, -86.2861111)', u'disk', u'Strobe Lighted disk shape object observed clos...nd low altitude in Oct 1966 in Pell City Alabama', None), (10L, datetime.datetime(1966, 10, 10, 21, 0), u'(30.2947222, -82.9841667)', u'disk', u'Saucer zaps energy from powerline as my pregnant mother receives mental signals not to pass info', None))"
+p151
+sS'db'
+p152
+g108
+sS'query._db'
+p153
+g108
+ssg72
+I2325
+sg73
+(dp154
+I2320
+S"                      buttonview='icon magnifier icon-zoom-in glyphicon glyphicon-zoom-in'"
+p155
+sI2321
+S'                      )'
+p156
+sI2322
+S'        elif not isinstance(ui, dict):'
+p157
+sI2323
+S"            raise RuntimeError('SQLFORM.grid ui argument must be a dictionary')"
+p158
+sI2324
+S''
+sI2325
+S'        db = query._db'
+p159
+sI2326
+S'        T = current.T'
+p160
+sI2327
+S'        request = current.request'
+p161
+sI2328
+S'        session = current.session'
+p162
+sI2329
+S'        response = current.response'
+p163
+ssg85
+S"(query=((1L, datetime.datetime(1949, 10, 10, 20, 30), u'(29.8830556, -97.9411111)', u'cylinder', u'This event took place in early fall around 194...ng in the Baptist Church. The Baptist Church sit', None), (2L, datetime.datetime(1949, 10, 10, 21, 0), u'(29.38421, -98.581082)', u'light', u'1949 Lackland AFB&#44 TX.  Lights racing across the sky &amp; making 90 degree turns on a dime.', None), (3L, datetime.datetime(1955, 10, 10, 17, 0), u'(53.2, -2.916667)', u'circle', u'Green/Orange circular disc over Chester&#44 England', None), (4L, datetime.datetime(1956, 10, 10, 21, 0), u'(28.9783333, -96.6458333)', u'circle', u'My older brother and twin sister were leaving ... had our bikes and I took a different route home', None), (5L, datetime.datetime(1960, 10, 10, 20, 0), u'(21.4180556, -157.8036111)', u'light', u'AS a Marine 1st Lt. flying an FJ4B fighter/att...&#39 in a &quot;clean&quot; aircraft (no ordinan', None), (6L, datetime.datetime(1961, 10, 10, 19, 0), u'(36.595, -82.1888889)', u'sphere', u'My father is now 89 my brother 52 the girl wit...hich worked with my father if he&#39s still livi', None), (7L, datetime.datetime(1965, 10, 10, 21, 0), u'(51.434722, -3.18)', u'circle', u'penarth uk  circle  3mins  stayed 30ft above m...n with the blink of the eye the speed was unreal', None), (8L, datetime.datetime(1965, 10, 10, 23, 45), u'(41.1175, -73.4083333)', u'disk', u'A bright orange color changing to reddish colo...bserved hovering above power transmission lines.', None), (9L, datetime.datetime(1966, 10, 10, 20, 0), u'(33.5861111, -86.2861111)', u'disk', u'Strobe Lighted disk shape object observed clos...nd low altitude in Oct 1966 in Pell City Alabama', None), (10L, datetime.datetime(1966, 10, 10, 21, 0), u'(30.2947222, -82.9841667)', u'disk', u'Saucer zaps energy from powerline as my pregnant mother receives mental signals not to pass info', None)), fields=None, field_id=None, left=None, headers={}, orderby=None, groupby=None, searchable=True, sortable=True, paginate=10, deletable=True, editable=True, details=True, selectable=None, create=True, csv=True, links=None, links_in_grid=True, upload='<default>', args=[], user_signature=True, maxtextlengths={}, maxtextlength=20, onvalidation=None, onfailure=None, oncreate=None, onupdate=None, ondelete=None, sorter_icons=(&#x25B2;, &#x25BC;), ui={'button': 'button btn btn-default btn-secondary', 'buttonadd': 'icon plus icon-plus glyphicon glyphicon-plus', 'buttonback': 'icon leftarrow icon-arrow-left glyphicon glyphicon-arrow-left', 'buttondelete': 'icon trash icon-trash glyphicon glyphicon-trash', 'buttonedit': 'icon pen icon-pencil glyphicon glyphicon-pencil', 'buttonexport': 'icon downarrow icon-download glyphicon glyphicon-download', 'buttontable': 'icon rightarrow icon-arrow-right glyphicon glyphicon-arrow-right', 'buttontext': 'buttontext button', 'buttonview': 'icon magnifier icon-zoom-in glyphicon glyphicon-zoom-in', 'content': '', ...}, showbuttontext=True, _class='web2py_grid', formname='web2py_grid', search_widget='default', advanced_search=True, ignore_rw=False, formstyle='bootstrap4_inline', exportclasses=None, formargs={}, createargs={}, editargs={}, viewargs={}, selectable_submit_button='Submit', buttons_placement='right', links_placement='right', noconfirm=False, cache_count=None, client_side_delete=False, ignore_common_filters=None, auto_pagination=True, use_cursor=False, represent_none=None, showblobs=False)"
+p164
+sg87
+S'grid'
+p165
+sasS'pyver'
+p166
+S'Python 2.7.12: /usr/local/bin/uwsgi (prefix: /usr)'
+p167
+sS'session'
+p168
+g59
+(S's\xcd\x04\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">met_filter_cat</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">met_filter_text</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">met_index</td><td style="vertical-align:top;">:</td><td><div>0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">met_sort</td><td style="vertical-align:top;">:</td><td><div>ID</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">testing</td><td style="vertical-align:top;">:</td><td><div>0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">ufo_filter_cat</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">ufo_filter_text</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">ufo_index</td><td style="vertical-align:top;">:</td><td><div>0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">ufo_sort</td><td style="vertical-align:top;">:</td><td><div>ID</div></td></tr></table></div>'
+tRp169
+sS'etype'
+p170
+S"<type 'exceptions.AttributeError'>"
+p171
+sS'date'
+p172
+S'Fri Apr  5 19:12:06 2019'
+p173
+sS'response'
+p174
+g59
+(S's\x90\x1e\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f98558ca730&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap4_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Meteorite</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/welcome/meteoritepage/meteorite</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>UFO</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/welcome/ufopage/ufo</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Map</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/welcome/mappage/map</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Update</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/welcome/updatepage/update</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^updatepage/\\w+\\.py$</div></td></tr><tr><td><div>^updatepage/update/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_welcome</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/utahgroup/web2py/applications/welcome/sessions/0f6/006/73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e&#x27;, mode &#x27;rb+&#x27; at 0x7f98565a4150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/utahgroup/web2py/applications/welcome/sessions/73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>25f81b1c4506f5b4da62e0051ac8a5c5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>73.98.150.253-fcb5b074-b82c-4124-8d2b-3d429a7e0c5e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>welcome</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">show_toolbar</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>updatepage/update.html</div></td></tr></table></div>'
+tRp175
+sS'locals'
+p176
+(dp177
+S'searchable'
+p178
+S'True'
+p179
+sS'paginate'
+p180
+S'10'
+p181
+sS'advanced_search'
+p182
+g179
+sS'noconfirm'
+p183
+S'False'
+p184
+sS'sorter_icons'
+p185
+S'(&#x25B2;, &#x25BC;)'
+p186
+sS'query'
+p187
+S"((1L, datetime.datetime(1949, 10, 10, 20, 30), u'(29.8830556, -97.9411111)', u'cylinder', u'This event took place in early fall around 194...ng in the Baptist Church. The Baptist Church sit', None), (2L, datetime.datetime(1949, 10, 10, 21, 0), u'(29.38421, -98.581082)', u'light', u'1949 Lackland AFB&#44 TX.  Lights racing across the sky &amp; making 90 degree turns on a dime.', None), (3L, datetime.datetime(1955, 10, 10, 17, 0), u'(53.2, -2.916667)', u'circle', u'Green/Orange circular disc over Chester&#44 England', None), (4L, datetime.datetime(1956, 10, 10, 21, 0), u'(28.9783333, -96.6458333)', u'circle', u'My older brother and twin sister were leaving ... had our bikes and I took a different route home', None), (5L, datetime.datetime(1960, 10, 10, 20, 0), u'(21.4180556, -157.8036111)', u'light', u'AS a Marine 1st Lt. flying an FJ4B fighter/att...&#39 in a &quot;clean&quot; aircraft (no ordinan', None), (6L, datetime.datetime(1961, 10, 10, 19, 0), u'(36.595, -82.1888889)', u'sphere', u'My father is now 89 my brother 52 the girl wit...hich worked with my father if he&#39s still livi', None), (7L, datetime.datetime(1965, 10, 10, 21, 0), u'(51.434722, -3.18)', u'circle', u'penarth uk  circle  3mins  stayed 30ft above m...n with the blink of the eye the speed was unreal', None), (8L, datetime.datetime(1965, 10, 10, 23, 45), u'(41.1175, -73.4083333)', u'disk', u'A bright orange color changing to reddish colo...bserved hovering above power transmission lines.', None), (9L, datetime.datetime(1966, 10, 10, 20, 0), u'(33.5861111, -86.2861111)', u'disk', u'Strobe Lighted disk shape object observed clos...nd low altitude in Oct 1966 in Pell City Alabama', None), (10L, datetime.datetime(1966, 10, 10, 21, 0), u'(30.2947222, -82.9841667)', u'disk', u'Saucer zaps energy from powerline as my pregnant mother receives mental signals not to pass info', None))"
+p188
+sS'viewargs'
+p189
+g19
+sS'cache_count'
+p190
+S'None'
+p191
+sS'selectable_submit_button'
+p192
+S"'Submit'"
+p193
+sS'client_side_delete'
+p194
+g184
+sS'formstyle'
+p195
+S"'bootstrap4_inline'"
+p196
+sS'maxtextlengths'
+p197
+g19
+sS'maxtextlength'
+p198
+S'20'
+p199
+sS'links'
+p200
+S'None'
+p201
+sS'createargs'
+p202
+g19
+sS'create'
+p203
+g179
+sS'formargs'
+p204
+g19
+sS'onupdate'
+p205
+S'None'
+p206
+sS'ignore_rw'
+p207
+g184
+sS'showblobs'
+p208
+g184
+sS'details'
+p209
+g179
+sS'onvalidation'
+p210
+S'None'
+p211
+sS'represent_none'
+p212
+S'None'
+p213
+sS'user_signature'
+p214
+g179
+sS'_class'
+p215
+S"'web2py_grid'"
+p216
+sS'auto_pagination'
+p217
+g179
+sS'ondelete'
+p218
+S'None'
+p219
+sS'ignore_common_filters'
+p220
+S'None'
+p221
+sS'onfailure'
+p222
+S'None'
+p223
+sS'use_cursor'
+p224
+g184
+sS'editable'
+p225
+g179
+sg44
+S'[]'
+p226
+sS'field_id'
+p227
+S'None'
+p228
+sS'deletable'
+p229
+g179
+sS'search_widget'
+p230
+S"'default'"
+p231
+sS'links_in_grid'
+p232
+g179
+sS'selectable'
+p233
+S'None'
+p234
+sS'formname'
+p235
+S"'web2py_grid'"
+p236
+sS'orderby'
+p237
+S'None'
+p238
+sS'dbset'
+p239
+S'None'
+p240
+sS'sortable'
+p241
+g179
+sS'fields'
+p242
+S'None'
+p243
+sS'editargs'
+p244
+g19
+sS'showbuttontext'
+p245
+g179
+sS'upload'
+p246
+S"'<default>'"
+p247
+sS'groupby'
+p248
+S'None'
+p249
+sS'headers'
+p250
+g19
+sS'buttons_placement'
+p251
+S"'right'"
+p252
+sS'ui'
+p253
+S"{'button': 'button btn btn-default btn-secondary', 'buttonadd': 'icon plus icon-plus glyphicon glyphicon-plus', 'buttonback': 'icon leftarrow icon-arrow-left glyphicon glyphicon-arrow-left', 'buttondelete': 'icon trash icon-trash glyphicon glyphicon-trash', 'buttonedit': 'icon pen icon-pencil glyphicon glyphicon-pencil', 'buttonexport': 'icon downarrow icon-download glyphicon glyphicon-download', 'buttontable': 'icon rightarrow icon-arrow-right glyphicon glyphicon-arrow-right', 'buttontext': 'buttontext button', 'buttonview': 'icon magnifier icon-zoom-in glyphicon glyphicon-zoom-in', 'content': '', ...}"
+p254
+sS'links_placement'
+p255
+S"'right'"
+p256
+sS'oncreate'
+p257
+S'None'
+p258
+sS'csv'
+p259
+g179
+sS'exportclasses'
+p260
+S'None'
+p261
+sS'left'
+p262
+S'None'
+p263
+sssS'traceback'
+p264
+S'Traceback (most recent call last):\n  File "/home/utahgroup/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py", line 11, in <module>\n  File "/home/utahgroup/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/utahgroup/web2py/applications/welcome/controllers/updatepage.py", line 7, in update\n    ufo_grid = SQLFORM.grid(query=joined, paginate = 10)\n  File "/home/utahgroup/web2py/gluon/sqlhtml.py", line 2325, in grid\n    db = query._db\nAttributeError: \'tuple\' object has no attribute \'_db\'\n'
+p265
+s.

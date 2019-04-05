@@ -1,0 +1,156 @@
+{{extend 'layout.html'}}
+<hr>
+<h1 style="text-align: center; margin-top: 50px;">UFO Sigthings</h1>
+<div align = "center">
+    <form action=set_filter()>
+        <p style="display:inline;">Search: &nbsp; </p>
+        <input value="{{=search_text}}" style="margin-top: 10px;" type="text" name="search_text" />
+        <br/>
+        <p style="display:inline;"> Search on:&nbsp; </p>
+        <select value="{{=filter_category}}" style="margin-top: 10px;" name="filter" >
+            <option value="ID" {{= 'selected' if filter_category == "ID" else ''}} >ID</option>
+            <option value="Date Time Year" {{= 'selected' if filter_category == "Date Time Year" else ''}} >Date Time (Year)</option>
+            <option value="Date Time Month" {{= 'selected' if filter_category == "Date Time Month" else ''}} >Date Time (Month)</option>
+            <option value="Date Time Day" {{= 'selected' if filter_category == "Date Time Day" else ''}} >Date Time (Day)</option>
+            <option value="Geo Location" {{= 'selected' if filter_category == "Geo Location" else ''}} >Geo Location</option>
+            <option value="Shape" {{= 'selected' if filter_category == "Shape" else ''}} >Shape</option>
+            <option value="Comments" {{= 'selected' if filter_category == "Comments" else ''}} >Comments</option>
+            <option value="Duration" {{= 'selected' if filter_category == "Duration" else ''}} >Duration</option>
+        </select>
+        <input style="margin-left: 10px;" type="submit" value="Search" />
+    </form>
+    <form action=reset_filter()>
+        <input style="margin-top: 10px; margin-left: 10px; width: 100px;" type="submit" value="Reset Filter" />
+    </form>
+</div>
+<div align = "center" >
+    Sort by: <a href='/{{=request.application}}/{{=request.controller}}/sort_ufo/A'> {{= I(B('ID')) if sort_selection == 'ID' else 'ID' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_ufo/B'> {{= I(B('Date Time')) if sort_selection == 'Date Time' else 'Date Time' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_ufo/C'> {{= I(B('Geo Location')) if sort_selection == 'Geo Location' else 'Geo Location' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_ufo/D'> {{= I(B('Shape')) if sort_selection == 'Shape' else 'Shape' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_ufo/E'> {{= I(B('Comments')) if sort_selection == 'Comments' else 'Comments' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_ufo/F'> {{= I(B('Duration')) if sort_selection == 'Duration' else 'Duration' }} </a>
+</div>
+<hr/>
+<div>
+    <div align = "center" >
+        {{
+        current_page = 0
+        if count%page_count == 0:
+            pages = int(count/page_count)
+        else:
+            pages = int(count/page_count) + 1
+        pass
+
+        if pages == 0:
+            = 'No Results'
+        elif index%page_count == 0:
+            current_page = ((index+page_count)/page_count)
+            ='Page ' + str(current_page) + ' of ' + str(pages)
+        elif int(index) == 0:
+            ='Page 1 of ' + str(pages)
+        else:
+            ='Page ' + str(pages) + ' of ' + str(pages)
+        pass
+        }}
+    </div>
+    {{ if (index == 0) and (count > page_count): }}
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+    {{ if (index+page_count > count) and (not index == 0): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    {{ pass }}
+    {{ if (not index == 0) and (not index+page_count > count): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+</div>
+
+{{
+if index+page_count > count:
+    end_index = count
+else:
+    end_index = index+page_count
+pass
+}}
+<div align="center">
+    {{ for x in range(index, (end_index)): }}
+    <div style="display:inline-block; margin: 10px; width: 450px; border: 1px dashed black; background-color : #E5F6F3;" class='row';>
+        <p align="left" style="margin-top: 2px;">
+            &nbsp;({{=x+1}})
+        </p>
+        <p>
+            &emsp;<b>ID :</b> {{=rows[x].id}}
+        </p>
+        <p>
+            &emsp;<b>Date Time :</b> {{=rows[x].datetime}}
+        </p>
+        <p>
+            &emsp;<b>Geo Location :</b> {{=rows[x].GeoLocation}}
+        </p>
+        <p>
+            &emsp;<b>Shape :</b> {{=rows[x].shape}}
+        </p>
+        <div style="height: 110px; padding-left: 20px; padding-right: 20px;">
+            <p>
+                &emsp;<b>Comments :</b> {{=rows[x].comments}}
+            </p>
+        </div>
+        <p>
+            &emsp;<b>Duration :</b> {{=rows[x].duration_sec}}
+        </p>
+    </div>
+    {{ pass }}
+</div>
+
+<div style="margin-top: 10px" >
+    {{ if (index == 0) and (count > page_count): }}
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+    {{ if (index+page_count > count) and (not index == 0): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    {{ pass }}
+    {{ if (not index == 0) and (not index+page_count > count): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+    <a href="#top">Top of Page</a>
+    <div align = "center" >
+        {{
+        current_page = 0
+        if count%page_count == 0:
+            pages = int(count/page_count)
+        else:
+            pages = int(count/page_count) + 1
+        pass
+
+        if pages == 0:
+            = 'No Results'
+        elif index%page_count == 0:
+            current_page = ((index+page_count)/page_count)
+            ='Page ' + str(current_page) + ' of ' + str(pages)
+        elif int(index) == 0:
+            ='Page 1 of ' + str(pages)
+        else:
+            ='Page ' + str(pages) + ' of ' + str(pages)
+        pass
+        }}
+    </div>
+</div>
+<hr/>

@@ -1,0 +1,2 @@
+{{extend 'layout.html'}}
+<h1 style="text-align: center; margin-top: 50px;">Add/Update/Delete</h1>

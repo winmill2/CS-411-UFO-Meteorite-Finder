@@ -1,0 +1,152 @@
+{{extend 'layout.html'}}
+<hr>
+<h1 style="text-align: center; margin-top: 50px;">Meteorite Landings</h1>
+<div align = "center">
+    <form action=set_filter()>
+        <p style="display:inline;">Search: &nbsp; </p>
+        <input value="{{=search_text}}" style="margin-top: 10px;" type="text" name="search_text" />
+        <br/>
+        <p style="display:inline;"> Search on:&nbsp; </p>
+        <select value="{{=filter_category}}" style="margin-top: 10px;" name="filter" >
+            <option value="ID" {{= 'selected' if filter_category == "ID" else ''}} >ID</option>
+            <option value="Mass" {{= 'selected' if filter_category == "Mass" else ''}} >Mass</option>
+            <option value="Geo Location" {{= 'selected' if filter_category == "Geo Location" else ''}} >Geo Location</option>
+            <option value="Name" {{= 'selected' if filter_category == "Name" else ''}} >Name</option>
+            <option value="Class" {{= 'selected' if filter_category == "Class" else ''}} >Class</option>
+            <option value="Year Seen" {{= 'selected' if filter_category == "Year Seen" else ''}} >Year Seen</option>
+        </select>
+        <input style="margin-left: 10px;" type="submit" value="Search" />
+    </form>
+    <form action=reset_filter()>
+        <input style="margin-top: 10px; margin-left: 10px; width: 100px;" type="submit" value="Reset Filter" />
+    </form>
+</div>
+<div align = "center" >
+    Sort by: <a href='/{{=request.application}}/{{=request.controller}}/sort_met/A'> {{= I(B('ID')) if sort_selection == 'ID' else 'ID' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_met/B'> {{= I(B('Mass')) if sort_selection == 'Mass' else 'Mass' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_met/C'> {{= I(B('Geo Location')) if sort_selection == 'Geo Location' else 'Geo Location' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_met/D'> {{= I(B('Name')) if sort_selection == 'Name' else 'Name' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_met/E'> {{= I(B('Class')) if sort_selection == 'Class' else 'Class' }} </a>
+         | <a href='/{{=request.application}}/{{=request.controller}}/sort_met/F'> {{= I(B('Year Seen')) if sort_selection == 'Year Seen' else 'Year Seen' }} </a>
+</div>
+<hr/>
+<div>
+    <div align = "center" >
+        {{
+        current_page = 0
+        if count%page_count == 0:
+            pages = int(count/page_count)
+        else:
+            pages = int(count/page_count) + 1
+        pass
+
+        if pages == 0:
+            = 'No Results'
+        elif index%page_count == 0:
+            current_page = ((index+page_count)/page_count)
+            ='Page ' + str(current_page) + ' of ' + str(pages)
+        elif int(index) == 0:
+            ='Page 1 of ' + str(pages)
+        else:
+            ='Page ' + str(pages) + ' of ' + str(pages)
+        pass
+        }}
+    </div>
+    {{ if (index == 0) and (count > page_count): }}
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+    {{ if (index+page_count > count) and (not index == 0): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    {{ pass }}
+    {{ if (not index == 0) and (not index+page_count > count): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+</div>
+
+{{
+if index+page_count > count:
+    end_index = count
+else:
+    end_index = index+page_count
+pass
+}}
+<div align="center">
+    {{ for x in range(index, (end_index)): }}
+    <div style="display:inline-block; margin: 10px; width: 450px; border: 1px dashed black; background-color : #D3E7E3;" class='row';>
+        <p align="left" style="margin-top: 2px;">
+            &nbsp;({{=x+1}})
+        </p>
+        <p>
+            &emsp;<b>ID :</b> {{=rows[x].id}}
+        </p>
+        <p>
+            &emsp;<b>Mass :</b> {{=rows[x].mass}}
+        </p>
+        <p>
+            &emsp;<b>Geo Location :</b> {{=rows[x].GeoLocation}}
+        </p>
+        <p>
+            &emsp;<b>Name :</b> {{=rows[x].name}}
+        </p>
+        <p>
+            &emsp;<b>Class :</b> {{=rows[x].class_met}}
+        </p>
+        <p>
+            &emsp;<b>Year Seen :</b> {{=rows[x].year_seen}}
+        </p>
+    </div>
+    {{ pass }}
+</div>
+
+<div style="margin-top: 10px" >
+    {{ if (index == 0) and (count > page_count): }}
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+    {{ if (index+page_count > count) and (not index == 0): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    {{ pass }}
+    {{ if (not index == 0) and (not index+page_count > count): }}
+    <form style="display:inline-block;" action=prev_page()>
+        <input class="btn btn-primary" type="submit" value="Previous" />
+    </form>
+    <form style="display:inline-block;" action=next_page()>
+        <input class="btn btn-primary" type="submit" value="Next" />
+    </form>
+    {{ pass }}
+    <a href="#top">Top of Page</a>
+    <div align = "center" >
+        {{
+        current_page = 0
+        if count%page_count == 0:
+            pages = int(count/page_count)
+        else:
+            pages = int(count/page_count) + 1
+        pass
+
+        if pages == 0:
+            = 'No Results'
+        elif index%page_count == 0:
+            current_page = ((index+page_count)/page_count)
+            ='Page ' + str(current_page) + ' of ' + str(pages)
+        elif int(index) == 0:
+            ='Page 1 of ' + str(pages)
+        else:
+            ='Page ' + str(pages) + ' of ' + str(pages)
+        pass
+        }}
+    </div>
+</div>
+<hr/>
