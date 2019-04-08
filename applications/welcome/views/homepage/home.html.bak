@@ -15,5 +15,5 @@
 </form>
 
 <form align="center" action="goToUpdate()">
-    <input type="submit" style="margin-top: 40px; margin-bottom: 80px; width: 500px; height: 100px; font-size: 30px; background-color: #4475c4; color: white;" value="Update" />
+    <input type="submit" style="margin-top: 40px; margin-bottom: 80px; width: 500px; height: 100px; font-size: 30px; background-color: #4475c4; color: white;" value="Update Database" />
 </form>

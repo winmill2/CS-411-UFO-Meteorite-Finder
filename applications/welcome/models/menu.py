@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # this file is released under public domain and you can use without limitations
-# Test
 
 items_per_page = 30
 
@@ -15,6 +14,9 @@ if not (request.controller == 'meteoritepage'):
     session.met_sort = 'ID'
     session.met_filter_cat = None
     session.met_filter_text = ''
+
+if not (request.controller == 'updatepage'):
+    session.show_table = ''
 
 # ----------------------------------------------------------------------------------------------------------------------
 # this is the main application menu add/remove items as required

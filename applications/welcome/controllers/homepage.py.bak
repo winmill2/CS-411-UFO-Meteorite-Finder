@@ -16,4 +16,4 @@ def goToMap():
     redirect(URL('mappage', 'map'))
 
 def goToUpdate():
-    redirect(URL('adminCRUD', 'update'))
+    redirect(URL('updatepage', 'update'))

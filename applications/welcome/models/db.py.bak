@@ -6,6 +6,7 @@
 # -------------------------------------------------------------------------
 from gluon.contrib.appconfig import AppConfig
 from gluon.tools import Auth
+from gluon.globals import current
 
 # -------------------------------------------------------------------------
 # This scaffolding model makes your app work on Google App Engine too
@@ -104,6 +105,9 @@ mail.settings.login = configuration.get('smtp.login')
 mail.settings.tls = configuration.get('smtp.tls') or False
 mail.settings.ssl = configuration.get('smtp.ssl') or False
 
+current.db = db
+current.auth = auth
+
 # -------------------------------------------------------------------------
 # configure auth policy
 # -------------------------------------------------------------------------
@@ -113,7 +117,7 @@ auth.settings.reset_password_requires_verification = True
 
 db.define_table('Meteorite_table',Field('mass', type = 'double'),Field('GeoLocation', type = 'string'),Field('name', type = 'string'),Field('class_met', 'string'),Field('year_seen', type = 'integer'),migrate='Meteorite_table')
 
-db.define_table('UFO_table',Field('datetime', type = 'datetime'), Field('GeoLocation', type = 'string'),Field('shape',type='string'),Field('comments',type='string'),Field('duration_sec',type = 'int'),migrate='UFO_table')
+db.define_table('UFO_table',Field('datetime', type = 'datetime'), Field('GeoLocation', type = 'string'),Field('shape',type='string'),Field('comments',type='string'),Field('duration_sec',type = 'integer'),migrate='UFO_table')
 
 db.define_table('Location_table',Field('GeoLocation', type = 'string'),Field('latitude',type = 'float'),Field('longitude', type = 'float'),Field('city',type = 'string'),Field('state',type='string'),Field('country', type = 'string'),migrate='Location_table')
 

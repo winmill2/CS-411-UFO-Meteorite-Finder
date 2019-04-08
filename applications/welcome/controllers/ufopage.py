@@ -23,7 +23,6 @@ def ufo():
 
     if session.ufo_display_flash == 'Yes':
         response.flash = 'That field is expecting an integer to be searched (no letters, spaces, or symbols).'
-
     session.ufo_display_flash = 'No'
 
     if (filter_category == "ID") and (not search_text == ''):
@@ -45,9 +44,11 @@ def ufo():
     else:
         ufo_set = db(db.UFO_table)
 
+    # Remove below code eventually
     count = ufo_set.count()
     if count > 1000:
         count = 1000
+    ##############################
 
     # Currently only selecting a MAX of 1000 rows (Takes a LONG time if we grab everything right now).
 

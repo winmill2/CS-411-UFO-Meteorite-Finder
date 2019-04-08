@@ -1,2 +1,2 @@
 #crontab
-*5 24  * *  * root *applications/instore/modules/updater.py
+15 09  * *  * root *applications/welcome/modules/updater.py

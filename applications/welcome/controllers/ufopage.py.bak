@@ -45,9 +45,11 @@ def ufo():
     else:
         ufo_set = db(db.UFO_table)
 
+    # Remove below code eventually
     count = ufo_set.count()
     if count > 1000:
         count = 1000
+    ##############################
 
     # Currently only selecting a MAX of 1000 rows (Takes a LONG time if we grab everything right now).
 

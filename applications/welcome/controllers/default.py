@@ -5,6 +5,9 @@
 # -------------------------------------------------------------------------
 
 # ---- example index page ----
+
+import autoUpdate
+
 def index():
     #response.flash = T("put in a year (1990 t0 2017)")
     message = "Year not entered yet"
@@ -18,11 +21,12 @@ def index():
             message = "bad value for year. Hit back and reenter."
             return message
         if year == 99999:
-        #    db.Meteorite_table.import_from_csv_file(open('met.csv','r'))
-            db.UFO_table.import_from_csv_file(open('ufo_date_fixed.csv','r'))
-            message = "uploaded table"
+            #db.Meteorite_table.import_from_csv_file(open('met.csv','r'))
+            #db.UFO_table.import_from_csv_file(open('final_ufo.csv','r'))
+            x = autoUpdate.runUpdate(db)
+            message = x#"pulled info"
             #db.Location_table.import_from_csv_file(open('location.csv','r'))
-        if year > 2013:
+        elif year > 2013:
             message = "year is too high. Database only goes up to 2013 currently"
         elif year < 1939:
             message = "year is too low. Please input a year past 1938"

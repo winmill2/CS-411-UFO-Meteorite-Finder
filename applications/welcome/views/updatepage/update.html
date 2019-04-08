@@ -1,20 +1,37 @@
 {{extend 'layout.html'}}
-<h1>Select table to update:</h1>
-<form>
-  <input type="radio" name="table"  value="ufo_grid"> UFO<br>
-  <input type="radio" name="table"  value="met_grid"> Meteorite<br> 
-  <p><input type="button" value="Submit"></p>
-</form> 
+<hr>
+<h2 style="text-align: center; margin-top: 50px;">Select table to update:</h2>
 
+<div align = "center">
+    <form action=table_to_show()>
+        <select value="{{=selection}}" style="margin-top: 10px;" name="option" >
+            <option value="UFO" {{= 'selected' if selection == "ufo" else ''}} >UFO</option>
+            <option value="MET" {{= 'selected' if selection == "met" else ''}} >Meteorite</option>
+            <option value="LOC" {{= 'selected' if selection == "loc" else ''}} >Location</option>
+        </select>
+        <input style="margin-left: 10px;" type="submit" value="Select" />
+    </form>
+</div>
 
-<script type="text/javascript">
-    var radioValue
-    $(document).ready(function(){
-        $("input[type='button']").click(function(){
-        	 radioValue = $("input[name='table']:checked").val();
-            
-        });        
-    });
-</script>
+<hr>
 
-{{=ufo_grid}}
+{{if session.show_table == "ufo":}}
+<div>
+    <h1 style="text-align: center; margin-top: 50px; margin-bottom: 40px;"> UFO Table </h1>
+    {{=ufo_grid}}
+</div>
+{{pass}}
+
+{{if session.show_table == "met":}}
+<div>
+    <h1 style="text-align: center; margin-top: 50px; margin-bottom: 40px;"> Meteorite Table </h1>
+    {{=met_grid}}
+</div>
+{{pass}}
+
+{{if session.show_table == "loc":}}
+<div>
+    <h1 style="text-align: center; margin-top: 50px; margin-bottom: 40px;"> Location Table </h1>
+    {{=loc_grid}}
+</div>
+{{pass}}

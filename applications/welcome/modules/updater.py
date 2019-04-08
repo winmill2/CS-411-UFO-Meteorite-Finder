@@ -1,10 +1,19 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from gluon import *
 import pandas as pd
 from datetime import datetime
 from pandas.io import sql
 import pickle
+import csv
+import sys
+from gluon import current
+
+#formats time into appropriate format
+def formatDateTime(time):
+    try:
+        timeFormat = datetime.strptime(time,'%m/%d/%y %H:%M')
+        return timeFormat.strftime('%Y-%m-%d %H:%M:%S')
+    except:
+        timeFormat = datetime.strptime(time,'%m/%d/%y')
+        return timeFormat.strftime('%Y-%m-%d %H:%M:%S')
 
 #advance current month by one. increases year if dec
 def addMonth(month,year):
@@ -15,15 +24,25 @@ def addMonth(month,year):
     else:
         return str(int(month)+1),year
 
-def processOneTable(table,states,newEntries,missed,idNum):
+#adds records from one month's table
+def processOneTable(table,states,db):
+    error = " no errors on adding table "
     for index, row in table.iterrows():
         try:
             if states[row['State']][row['City']] != None:
-                newEntries.append([row['Date / Time'],states[row['State']][row['City']],row['Shape'],row['Summary'],duration(row['Duration'])])
-                idNum+=1
-        except KeyError:
-            missed.append([row['Date / Time'],row['State'],row['City'],row['Shape'],row['Summary'],duration(row['Duration'])])
+                newGeoLoc = states[row['State']][row['City']]
+                strLoc = '('+newGeoLoc[0]+','+newGeoLoc[1]+')'
+                #print("adding:",row['State'],row['City'],states[row['State']][row['City']])
+                newUFOId = db.UFO_table.insert(datetime= formatDateTime(row['Date / Time']),GeoLocation= strLoc, shape= row['Shape'], comments=row['Summary'] ,duration_sec=duration(row['Duration']))
+                newLocId = db.Location_table.update_or_insert(GeoLocation= strLoc, latitude=newGeoLoc[0], longitude=newGeoLoc[1], city=row['City'], state=row['State'], country= 'us')
 
+        except KeyError:
+            pass
+        except Exception:
+            error = sys.exc_info()
+    return error
+
+#converts duration to seconds
 def duration(duration):
     number = 0
     foundNum = False
@@ -45,9 +64,10 @@ def duration(duration):
                 if decimal:
                     decimalCount+=1
                     number = number*10 + num
+                    foundNum = True
                 #approximates the time in seconds (does not count the x in 00:0x)
                 elif timeFormat:
-                    return number*360+num*60
+                    return number*60+num*10
                 else:
                     number = number*10 + num
                     foundNum = True
@@ -57,56 +77,106 @@ def duration(duration):
                 if decimal:
                     number = number/(10**decimalCount)
                     decimal = False
-                if letter != ' ' or letter != '~' or letter != '<' or letter != '>':
+                if letter != ' ' and letter != '~' and letter != '<' and letter != '>':
                     time+=letter
                 if foundNum:
+                    #print("Found Num",time)
                     if time == 'sec':
                         return number
                     elif time == 'min':
                         return number*60
                     elif time == 'hr' or time == 'hour':
                         return number*360
-    return 'NaN'
+    return 0
 
-pdTables = []
+def getUploaded():
+    try:
+        uploaded = pickle.load(open('uploaded.p','rb'))
+    except:
+        uploaded = []
+    return uploaded
 
-lastMonth = '201505'
-idNum = 10000 #some db shit...: "select max(id) from UFO_table"+1
-missedWebsite = []
-count = 0
-stopMonth = '201809'
-currentMonth = int(datetime.today().strftime("%Y%m"))
+def getMissed():
+    try:
+        missed = pickle.load(open('missed.p','rb'))
+    except:
+        missed = []
+    return missed
 
-def getWebsiteInfo()
+def getPdTable():
+    try:
+        pdTable = pickle.load(open('pdTable.p','rb'))
+    except:
+        pdTable = []
+    return pdTable
+
+#returns: year,month as strings
+def startMonth(upLoadedMonths):
+    length = len(upLoadedMonths)
+    print upLoadedMonths
+    if length == 0:
+        return '2015','07' #when our info ends (technically 5/8/15)
+    else:
+        return addMonth(upLoadedMonths[length-1][1],upLoadedMonths[length-1][0])
+        #return upLoadedMonths[length-1][0],upLoadedMonths[length-1][1]
+
+def runUpdate(database):
+    missedMonths = getMissed()
+    upLoadedMonths = getUploaded()
+    states = makeCityFinder()
+    year,month = startMonth(upLoadedMonths)
+    pdTables = getPdTable()
+
+    db = current.db
+    
+    message = getWebsiteInfo(year,month,upLoadedMonths,missedMonths,pdTables,states,db)
+    #message = processOneTable(pdTables[0],states,db)
+
+    pickle.dump(pdTables,open('pdTable.p','wb'))
+    pickle.dump(upLoadedMonths, open('uploaded.p','wb'))
+    pickle.dump(missedMonths, open('missed.p','wb'))
+
+    return upLoadedMonths
+    #return "this was last month added " + year + month + '\n' + str(message)
+
+def getWebsiteInfo(year,month,uploadedMonths,missedMonths,pdTables,states,db):
     count = 0
-    while year+month != currentMonth and count <= limit:
-        try:
-            print('getting data from: '+ 'http://www.nuforc.org/webreports/ndxe'+year+month+'.html')
-            #newTable = pd.read_html('http://www.nuforc.org/webreports/ndxe'+year+month+'.html')
-            monthsObtained.append(year+month)
-        except:
-            missedWebsite.append(year+month)
+    currentMonth = datetime.today().strftime("%Y%m")
+    limit = 1
+    message = "did not get website data"
+    while year+month != currentMonth and count < limit:
 
+        #print("going for "+'http://www.nuforc.org/webreports/ndxe'+year+month+'.html')
+        newTable = pd.read_html('http://www.nuforc.org/webreports/ndxe'+year+month+'.html')
+        uploadedMonths.append((year,month))
+        message = 'http://www.nuforc.org/webreports/ndxe'+year+month+'.html'
         month,year = addMonth(month,year)
-        #pdTables.append(newTable[0])
-        processOneTable(newTable[0],states,newEntries,missedEntries,idNum)
-        count = 1
+        pdTables.append(newTable[0])
+        message = processOneTable(newTable[0],states,db)
+        count+= 1
 
-        return pdTables
+    return message
 
 def makeCityFinder():
-    states = {}
-
-    with open ('2010.csv') as censusZip:
-        censusInfo = csv.reader(censusZip,delimiter=',')
-        header = True
-        for row in censusInfo:
-            if header:
-                header = False
-            else:
-                if states.get(row[8]) == None:
-                    states[row[8]] = {}
-                    states[row[8]][row[7]] = (row[9],row[10])
+    try:
+        states = pickle.load(open('states.p','rb'))
+    except:
+        states = {}
+        with open ('cityStates.csv') as censusZip:
+            censusInfo = csv.reader(censusZip,delimiter=',')
+            for row in censusInfo:
+                if states.get(row[0]) == None:
+                    states[row[0]] = {}
+                    states[row[0]][row[1]] = (row[2],row[3])
                 else:
-                    states[row[8]][row[7]] = (row[9],row[10])
+                    states[row[0]][row[1]] = (row[2],row[3])
+        pickle.dump(states, open('states.p','wb'))
     return states
+
+def main():
+    #database = current.globalenv['db']
+    message = runUpdate()
+    return message
+
+if __name__ == "__main__":
+    main()

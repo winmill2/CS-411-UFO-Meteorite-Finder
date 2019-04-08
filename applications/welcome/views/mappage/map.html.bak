@@ -11,8 +11,9 @@
     {{=test}}
 </div>
 
-
-<div id='map' style='width: 900px; height: 400px;'></div>
+<div align="center" style="padding: 50px; margin: 50px;">
+    <p id='map' style='width: 900px; height: 400px;'></p>
+</div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoid2NoZXJyeTIiLCJhIjoiY2p1MGJhZWdmMXBtMDQzcnprZzM3ZHNqaiJ9.xM3fgL3OLZ-AOCksXBDarQ';
 var map = new mapboxgl.Map({
@@ -50,7 +51,11 @@ style: 'mapbox://styles/mapbox/streets-v11'
 <script src="js/jquery.js"></script>
   <script src="js/raphael.js"></script>
   <script src="js/jquery.usmap.js"></script>
-
+<script>
+    $(document).ready(function() {
+    $('#map').usmap({});
+  });
+</script>
 
 <div id="map" style="width: 350px; height: 250px;"></div>
 <div id="clicked-state"></div>

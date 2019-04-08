@@ -6,6 +6,7 @@
 # -------------------------------------------------------------------------
 from gluon.contrib.appconfig import AppConfig
 from gluon.tools import Auth
+from gluon import current
 
 # -------------------------------------------------------------------------
 # This scaffolding model makes your app work on Google App Engine too
@@ -103,6 +104,9 @@ mail.settings.sender = configuration.get('smtp.sender')
 mail.settings.login = configuration.get('smtp.login')
 mail.settings.tls = configuration.get('smtp.tls') or False
 mail.settings.ssl = configuration.get('smtp.ssl') or False
+
+current.db = db
+current.auth = auth
 
 # -------------------------------------------------------------------------
 # configure auth policy
