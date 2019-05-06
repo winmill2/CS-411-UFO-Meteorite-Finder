@@ -3,6 +3,10 @@
 
 items_per_page = 30
 
+if not (request.controller == 'mappage'):
+    session.state_id = 0
+    session.stateName = ""
+
 if not (request.controller == 'ufopage'):
     session.ufo_index = 0
     session.ufo_sort = 'ID'
@@ -14,6 +18,9 @@ if not (request.controller == 'meteoritepage'):
     session.met_sort = 'ID'
     session.met_filter_cat = None
     session.met_filter_text = ''
+
+if not (request.controller == 'updatepage'):
+    session.show_table = ''
 
 # ----------------------------------------------------------------------------------------------------------------------
 # this is the main application menu add/remove items as required

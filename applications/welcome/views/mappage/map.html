@@ -1,60 +1,164 @@
 {{extend 'layout.html'}}
+<hr>
+{{
+    if str(request.args(0)).isdigit():
+        session.state_id = (request.args(0))
+        redirect(URL('map'))
+    pass
+}}
+
+
 <head>
 <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
-<hr>
-<h1 style="text-align: center; margin-top: 50px;">Map</h1>
+<style type='text/css'>
+#info {
+display: block;
+position: relative;
+margin: 0px auto;
+width: 50%;
+padding: 10px;
+border: none;
+border-radius: 3px;
+font-size: 12px;
+text-align: center;
+color: #222;
+background: #fff;
+}
+</style>
 
-<div>
-    {{=test}}
-</div>
+<div id='map' style='width: 1125px; height: 550px; margin-left: 105px;' ></div>
 
-
-<div id='map' style='width: 900px; height: 400px;'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoid2NoZXJyeTIiLCJhIjoiY2p1MGJhZWdmMXBtMDQzcnprZzM3ZHNqaiJ9.xM3fgL3OLZ-AOCksXBDarQ';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11'
+style: 'mapbox://styles/mapbox/navigation-guidance-night-v2',
+minZoom: 3.7,
+maxZoom: 3.7,
+center: [-96.4,38.02]
 });
+map.dragRotate.disable();
+map.dragPan.disable();
+var hoveredStateId =  null;
+var clickedStateId = null;
+    map.on('load', function () {
+map.addSource("states", {
+"type": "geojson",
+"data": "https://docs.mapbox.com/mapbox-gl-js/assets/us_states.geojson"
+});
+
+// The feature-state dependent fill-opacity expression will render the hover effect
+// when a feature's hover state is set to true.
+map.addLayer({
+"id": "state-fills",
+"type": "fill",
+"source": "states",
+"layout": {},
+"paint": {
+"fill-color": "#627BC1",
+"fill-opacity": ["case",
+["boolean", ["feature-state", "hover"], false],
+.5,
+0
+]
+}
+});
+
+map.addLayer({
+"id": "clicked-state-fills",
+"type": "fill",
+"source": "states",
+"layout": {},
+"paint": {
+"fill-color": "#627BC1",
+"fill-opacity": ["case",
+["boolean", ["feature-state", "click"], false],
+.5,
+0
+]
+}
+});
+
+
+
+// When the user moves their mouse over the state-fill layer, we'll update the
+// feature state for the feature under the mouse.
+map.on("mousemove", "state-fills", function(e) {
+if (e.features.length > 0) {
+if (hoveredStateId) {
+map.setFeatureState({source: 'states', id: hoveredStateId}, { hover: false});
+}
+hoveredStateId = e.features[0].id;
+map.setFeatureState({source: 'states', id: hoveredStateId}, { hover: true});
+}
+});
+
+// When the mouse leaves the state-fill layer, update the feature state of the
+// previously hovered feature.
+map.on("mouseleave", "state-fills", function() {
+if (hoveredStateId) {
+map.setFeatureState({source: 'states', id: hoveredStateId}, { hover: false});
+}
+hoveredStateId =  null;
+});
+
+map.on("click", "clicked-state-fills", function(e) {
+if (e.features.length > 0) {
+if (clickedStateId) {
+map.setFeatureState({source: 'states', id: clickedStateId}, { click: false});
+}
+clickedStateId = e.features[0].id;
+map.setFeatureState({source: 'states', id: clickedStateId}, { click: true});
+document.getElementById('clickedState').innerHTML = clickedStateId ;
+}
+
+window.location = "https://utahgroup.pythonanywhere.com/welcome/mappage/map/" + clickedStateId;
+
+});
+
+
+});
+
 </script>
 
 
-<!------------------------------------------------------------------------------------------->
+<h1 style="text-align: center; margin-top: 50px;"> {{=stateName}} </h1>
 
-<form align="center" action="chooseState()" id="choosestate" method="POST">
-    <select name="states">
-        {{for rows in row: }}
-            {{if not rows.state == "dc" and not rows.state == "pr": }}
-            <option value={{=rows.state.upper()}}> {{=rows.state.upper()}}</option>
-            {{pass}}
-        {{pass}}
-    </select>
-</form>
-<div align="center" style="margin-top: 20px;">
-    <button type="submit" form="choosestate" value="Submit">Submit</button>
-</div>
-<div>
-    Controller = {{=request.controller}} and Session var = {{=test}}
-</div>
-<form align="center" action="incSession()" id="inctest">
-</form>
-<div align="center" style="margin-top: 20px;">
-    <button type="submit" form="inctest" value="Submit">Submit</button>
+<div style="float: left; text-align: left; width: 48%; margin-bottom: 100px;">
+<h1 style="text-align: center; margin-top: 50px; margin-bottom: 50px;"> UFO Sightings </h1>
+{{ for state in states: }}
+    <div style="text-align: center; margin: 10px; width: 100%; border: 1px dashed black; background-color : #E5F6F3;" class='row';>
+        <p>
+            &emsp;<b>Year :</b> {{=state[0].year}} &emsp;<b>Shape :</b> {{=state[1].capitalize()}} &emsp;<b>Duration :</b> {{=state[2]}} seconds &emsp;<b>City :</b> {{=state[3].capitalize()}}
+        </p>
+        <p>
+            &emsp;<b>Comments :</b> {{=state[4]}}
+        </p>
+    </div>
+{{ pass }}
 </div>
 
+<div style="display:inline; float: right; width: 48%; margin-bottom: 100px;">
+<h1 style="text-align: center; margin-top: 50px; margin-bottom: 50px;"> Meteorite Landings </h1>
+{{ for met in mets: }}
+    <div style="text-align: center; margin: 10px; width: 100%; border: 1px dashed black; background-color : #E5F6F3;" class='row';>
+        <p>
+            &emsp;<b>Year :</b> {{=met[0]}} &emsp;<b>Name :</b> {{=met[1].capitalize()}} &emsp;<b>Class :</b> {{=met[2]}} seconds
+        </p>
+    </div>
+{{ pass }}
+<p>
+*** The Meteorites Table lat and long didn't match up with a state in the locations table (It would return an Empty set). That is why we threw in just a regular query to display Meteorites ***
+</p>
+
+<p>
+*** However, everything is in place that if it was, our queries (if checking for the state was added) would be returning and displaying like the UFO half. It would all be showing the correct Meteorite Landings for the State... The Meteorite table we were given didn't have a corresponding State, where the UFO table did. ***
+</p>
+</div>
 
 
-<script src="js/jquery.js"></script>
-  <script src="js/raphael.js"></script>
-  <script src="js/jquery.usmap.js"></script>
-<script>
-    $(document).ready(function() {
-    $('#map').usmap({});
-  });
-</script>
-
-<div id="map" style="width: 350px; height: 250px;"></div>
-<div id="clicked-state"></div>
+<pre id = 'clickedState'></pre>
+<hr>

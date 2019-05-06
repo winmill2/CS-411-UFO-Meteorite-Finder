@@ -44,28 +44,23 @@ def ufo():
     else:
         ufo_set = db(db.UFO_table)
 
-    # Remove below code eventually
     count = ufo_set.count()
-    if count > 1000:
-        count = 1000
-    ##############################
 
-    # Currently only selecting a MAX of 1000 rows (Takes a LONG time if we grab everything right now).
 
     if session.ufo_sort == 'ID':
-        rows = ufo_set.select(orderby=db.UFO_table.id, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.id)
     elif session.ufo_sort == 'Date Time':
-        rows = ufo_set.select(orderby=db.UFO_table.datetime, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.datetime)
     elif session.ufo_sort == 'Geo Location':
-        rows = ufo_set.select(orderby=db.UFO_table.GeoLocation, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.GeoLocation)
     elif session.ufo_sort == 'Shape':
-        rows = ufo_set.select(orderby=db.UFO_table.shape, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.shape)
     elif session.ufo_sort == 'Comments':
-        rows = ufo_set.select(orderby=db.UFO_table.comments, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.comments)
     elif session.ufo_sort == 'Duration':
-        rows = ufo_set.select(orderby=db.UFO_table.duration_sec, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.duration_sec)
     else:
-        rows = ufo_set.select(orderby=db.UFO_table.id, limitby=(0,1000))
+        rows = ufo_set.select(orderby=db.UFO_table.id)
     return locals()
 
 def next_page():

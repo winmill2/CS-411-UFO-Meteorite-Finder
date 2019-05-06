@@ -42,25 +42,22 @@ def meteorite():
         met_set = db(db.Meteorite_table)
 
     count = met_set.count()
-    if count > 1000:
-        count = 1000
 
-    # Currently only selecting a MAX of 1000 rows (Takes a LONG time if we grab everything right now).
 
     if session.met_sort == 'ID':
-        rows = met_set.select(orderby=db.Meteorite_table.id, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.id)
     elif session.met_sort == 'Mass':
-        rows = met_set.select(orderby=db.Meteorite_table.mass, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.mass)
     elif session.met_sort == 'Geo Location':
-        rows = met_set.select(orderby=db.Meteorite_table.GeoLocation, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.GeoLocation)
     elif session.met_sort == 'Name':
-        rows = met_set.select(orderby=db.Meteorite_table.name, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.name)
     elif session.met_sort == 'Class':
-        rows = met_set.select(orderby=db.Meteorite_table.class_met, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.class_met)
     elif session.met_sort == 'Year Seen':
-        rows = met_set.select(orderby=db.Meteorite_table.year_seen, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.year_seen)
     else:
-        rows = met_set.select(orderby=db.Meteorite_table.id, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.id)
     return locals()
 
 def next_page():

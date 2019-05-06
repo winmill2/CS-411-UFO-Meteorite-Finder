@@ -3,6 +3,10 @@
 
 items_per_page = 30
 
+if not (request.controller == 'mappage'):
+    session.state_id = 0
+    session.stateName = ""
+
 if not (request.controller == 'ufopage'):
     session.ufo_index = 0
     session.ufo_sort = 'ID'

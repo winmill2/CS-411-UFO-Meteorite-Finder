@@ -7,8 +7,8 @@ if not session.met_index:
 if not session.met_sort:
     session.met_sort = 'ID'
 
-if not session.display_flash:
-    session.display_flash = 'No'
+if not session.met_display_flash:
+    session.met_display_flash = 'No'
 
 if not session.met_filter_cat:
     session.met_filter_cat = 'ID'
@@ -21,10 +21,10 @@ def meteorite():
     filter_category = session.met_filter_cat
     search_text = session.met_filter_text
 
-    if session.display_flash == 'Yes':
+    if session.met_display_flash == 'Yes':
         response.flash = 'That field is expecting an integer to be searched (no letters or symbols).'
 
-    session.display_flash = 'No'
+    session.met_display_flash = 'No'
 
     if (filter_category == "ID") and (not search_text == ''):
         met_set = db(db.Meteorite_table.id == search_text)
@@ -42,25 +42,23 @@ def meteorite():
         met_set = db(db.Meteorite_table)
 
     count = met_set.count()
-    if count > 1000:
-        count = 1000
 
-    # Currently only selecting a MAX of 1000 rows (Takes a LONG time if we grab everything right now).
+
 
     if session.met_sort == 'ID':
-        rows = met_set.select(orderby=db.Meteorite_table.id, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.id)
     elif session.met_sort == 'Mass':
-        rows = met_set.select(orderby=db.Meteorite_table.mass, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.mass)
     elif session.met_sort == 'Geo Location':
-        rows = met_set.select(orderby=db.Meteorite_table.GeoLocation, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.GeoLocation)
     elif session.met_sort == 'Name':
-        rows = met_set.select(orderby=db.Meteorite_table.name, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.name)
     elif session.met_sort == 'Class':
-        rows = met_set.select(orderby=db.Meteorite_table.class_met, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.class_met)
     elif session.met_sort == 'Year Seen':
-        rows = met_set.select(orderby=db.Meteorite_table.year_seen, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.year_seen)
     else:
-        rows = met_set.select(orderby=db.Meteorite_table.id, limitby=(0,1000))
+        rows = met_set.select(orderby=db.Meteorite_table.id)
     return locals()
 
 def next_page():
@@ -80,7 +78,7 @@ def set_filter():
             session.met_filter_cat = request.vars.filter
             session.met_filter_text = request.vars.search_text
         else:
-            session.display_flash = 'Yes'
+            session.met_display_flash = 'Yes'
     else:
         session.met_filter_cat = request.vars.filter
         session.met_filter_text = request.vars.search_text
